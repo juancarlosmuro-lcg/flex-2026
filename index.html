@@ -726,6 +726,13 @@ section.sec.dark h2.sh em{color:var(--lime)}
   .mig{grid-template-columns:1fr}
   .mig .mar{transform:rotate(90deg);padding:8px 0}
 }
+
+/* ===== ronda 4 ===== */
+.nf{display:grid;grid-template-columns:56px minmax(0,1fr);grid-template-rows:minmax(0,1fr);padding:0;overflow:hidden;height:100%;align-items:stretch;align-content:stretch}
+.nf .idx{position:static;width:auto;height:auto;margin:0;border-radius:0;display:flex;align-items:center;justify-content:center;padding:0;grid-template-columns:none}
+.nf .nfc{padding:22px 24px}
+.esc .wy{min-height:166px}
+@media(max-width:1000px){ .nf .nfc{padding:20px} .esc .wy{min-height:0} }
 </style>
 
 <style>
@@ -1033,7 +1040,7 @@ section.sec.dark h2.sh em{color:var(--lime)}
     <div class="tile" style="border-top:3px solid #C98A1F"><b class="num">40<sup style="font-size:14px">%</sup></b><span>Brecha entre el salario mínimo de la zona fronteriza y el general en 2026</span><em>CONASAMI · 2026</em></div>
   </div>
 
-  <div class="blk-h"><span class="k">Línea de tiempo</span><h3>Qué se publicó, cuándo <em>y por qué le importa al campus</em></h3></div>
+  <div class="blk-h one"><span class="k">Línea de tiempo</span><h3>Qué se publicó, cuándo <em>y por qué le importa al campus</em></h3></div>
   <div class="tl">
     <div class="tl-i"><div class="dt">5 de mayo de 2026 · confirmado el 15 de septiembre</div><h4>La corporación se separa en dos compañías</h4><p>El consejo aprobó escindir el segmento Cloud and Power Infrastructure en una compañía independiente que cotizará en bolsa. En septiembre se anunció el nombre, Axiom, y se presentó el Form 10 ante la SEC. La operación está sujeta a la aprobación del consejo, de los accionistas, de la Alta Corte de Singapur y a que la SEC declare efectivo el registro.</p><div class="why"><b>Por qué le importa a Flex México.</b> El sitio de Guadalajara produce para los tres segmentos. Cuando dos de ellos queden en una compañía y uno en otra, el costo compartido del sitio necesita una regla de asignación defendible ante dos consejos distintos, no ante uno.</div></div>
     <div class="tl-i"><div class="dt">1 de mayo de 2026 · escalonado a 2030</div><h4>La jornada baja a 46 horas en 2027 y a 40 en 2030</h4><p>Sin reducción de sueldos y con registro electrónico de jornada por persona a partir del 1 de enero de 2027.</p><div class="why"><b>Por qué le importa a Flex México.</b> En una operación por turnos, cada hora semanal que se retira por persona se repone con cobertura, con productividad o con plantilla. La diferencia entre las tres opciones es el costo por hora de manufactura que se compromete en cada cotización de programa.</div></div>
@@ -1185,12 +1192,12 @@ section.sec.dark h2.sh em{color:var(--lime)}
   <p class="lede">Cada uno se deriva de un hecho de las secciones anteriores. Ninguno supone una carencia: suponen que un sitio que crece a tres velocidades distintas necesita reglas explícitas donde antes bastaba el criterio.</p>
 
   <div class="g2 mt32">
-    <div class="nf"><div class="idx num">01</div><span class="tagx">Planta</span><h4>Costo por hora de manufactura, abierto</h4><p>El indicador con el que se mide un Program Manager es el costo comprometido contra el real. Para sostenerlo en dos compañías, ese costo tiene que estar abierto por línea, por turno y por programa, con mano de obra directa, indirectos y energía identificados por separado.</p></div>
-    <div class="nf"><div class="idx num">02</div><span class="tagx">Planta</span><h4>Asignación de servicios compartidos</h4><p>Mantenimiento, calidad, ingeniería, almacén, seguridad y energía sirven hoy a programas que quedarán de los dos lados. La regla de reparto define cuánto margen reporta cada compañía y necesita ser defendible ante ambos consejos.</p></div>
-    <div class="nf"><div class="idx num">03</div><span class="tagx">Rampa</span><h4>Curva de aprendizaje del producto nuevo</h4><p>Una rampa de mil millones de dólares introduce procesos y volúmenes nuevos sobre líneas y gente que ya corren. El costo de no calidad y el reproceso de las primeras semanas se vuelven margen perdido si no se miden desde el primer lote.</p></div>
-    <div class="nf"><div class="idx num">04</div><span class="tagx">Gente</span><h4>Cobertura de turno frente a 46 horas</h4><p>Desde enero de 2027 el registro electrónico vuelve auditable lo que hoy se administra con criterio. Decidir si el hueco de horas se cubre con método, con cobertura o con plantilla es una decisión de costo, no de nómina.</p></div>
-    <div class="nf"><div class="idx num">05</div><span class="tagx">Abasto</span><h4>Costo de aterrizaje por número de parte</h4><p>Con dos decretos arancelarios vigentes y programas de fomento ajustados, el costo de un componente depende de su fracción y de su régimen. Un promedio por familia esconde el número de parte que se volvió caro.</p></div>
-    <div class="nf"><div class="idx num">06</div><span class="tagx">Espacio</span><h4>Capacidad por metro cuadrado</h4><p>En un mercado industrial sin vacancia, el metro cuadrado liberado por reacomodo de líneas, almacén e inventario en proceso es capacidad que no se renta. Es el frente que más rápido se convierte en pesos.</p></div>
+    <div class="nf"><div class="idx num">01</div><div class="nfc"><span class="tagx">Planta</span><h4>Costo por hora de manufactura, abierto</h4><p>El indicador con el que se mide un Program Manager es el costo comprometido contra el real. Para sostenerlo en dos compañías, ese costo tiene que estar abierto por línea, por turno y por programa, con mano de obra directa, indirectos y energía identificados por separado.</p></div></div>
+    <div class="nf"><div class="idx num">02</div><div class="nfc"><span class="tagx">Planta</span><h4>Asignación de servicios compartidos</h4><p>Mantenimiento, calidad, ingeniería, almacén, seguridad y energía sirven hoy a programas que quedarán de los dos lados. La regla de reparto define cuánto margen reporta cada compañía y necesita ser defendible ante ambos consejos.</p></div></div>
+    <div class="nf"><div class="idx num">03</div><div class="nfc"><span class="tagx">Rampa</span><h4>Curva de aprendizaje del producto nuevo</h4><p>Una rampa de mil millones de dólares introduce procesos y volúmenes nuevos sobre líneas y gente que ya corren. El costo de no calidad y el reproceso de las primeras semanas se vuelven margen perdido si no se miden desde el primer lote.</p></div></div>
+    <div class="nf"><div class="idx num">04</div><div class="nfc"><span class="tagx">Gente</span><h4>Cobertura de turno frente a 46 horas</h4><p>Desde enero de 2027 el registro electrónico vuelve auditable lo que hoy se administra con criterio. Decidir si el hueco de horas se cubre con método, con cobertura o con plantilla es una decisión de costo, no de nómina.</p></div></div>
+    <div class="nf"><div class="idx num">05</div><div class="nfc"><span class="tagx">Abasto</span><h4>Costo de aterrizaje por número de parte</h4><p>Con dos decretos arancelarios vigentes y programas de fomento ajustados, el costo de un componente depende de su fracción y de su régimen. Un promedio por familia esconde el número de parte que se volvió caro.</p></div></div>
+    <div class="nf"><div class="idx num">06</div><div class="nfc"><span class="tagx">Espacio</span><h4>Capacidad por metro cuadrado</h4><p>En un mercado industrial sin vacancia, el metro cuadrado liberado por reacomodo de líneas, almacén e inventario en proceso es capacidad que no se renta. Es el frente que más rápido se convierte en pesos.</p></div></div>
   </div>
 
   <div class="mesh full mt32">
@@ -1291,8 +1298,8 @@ section.sec.dark h2.sh em{color:var(--lime)}
 
   <div class="g3 mt32">
     <div class="esc"><div class="cap" style="background:var(--green-200)"><b>Escenario base</b><h4>La separación ocurre a tiempo</h4></div>
-      <div class="bd">La escisión cierra en el primer trimestre de 2027 y la demanda de infraestructura de inteligencia artificial se mantiene en los niveles que la compañía guía hoy. Las dos compañías operan con contratos de servicios de transición durante los primeros trimestres.</div>
-      <div class="wy"><b>Qué podría significar para Flex México.</b> El sitio factura servicios a dos clientes corporativos distintos. Cada hora de planta, cada metro cuadrado y cada indirecto tiene que poder facturarse con un criterio auditable.</div></div>
+      <div class="bd">La escisión cierra en el primer trimestre de 2027 y la demanda de infraestructura de inteligencia artificial se mantiene. Las dos compañías operan con contratos de transición.</div>
+      <div class="wy"><b>Qué podría significar para Flex México.</b> El sitio factura servicios a dos clientes corporativos distintos. Cada hora de planta, cada metro cuadrado y cada indirecto tiene que facturarse con un criterio auditable.</div></div>
     <div class="esc"><div class="cap" style="background:var(--lime)"><b>Escenario de aceleración</b><h4>La rampa llega antes que la capacidad</h4></div>
       <div class="bd">La demanda del segmento de nube y potencia crece por encima de lo planeado y la inversión de 2026–2028 se adelanta en el sitio que ya tiene mayor capacidad instalada y energía propia.</div>
       <div class="wy"><b>Qué podría significar para Flex México.</b> La restricción pasa a ser física y humana al mismo tiempo: espacio en un mercado sin vacancia y técnicos disputados por seis pares directos. El metro cuadrado liberado y la curva de aprendizaje se vuelven el camino más rápido a capacidad.</div></div>
@@ -1873,7 +1880,7 @@ function vbars(id,D,fmt,unit,ticks){
   var svg=el(id); if(!svg) return; svg.innerHTML="";
   var W=980,base=262,top=76,maxv=0;
   D.forEach(function(d){if(d.v>maxv)maxv=d.v;});
-  var n=D.length, gap=22, bw=Math.min(132,(W-gap*(n-1))/n);
+  var n=D.length, gap=n<=3?96:40, bw=Math.min(n<=3?128:132,(W-116-gap*(n-1))/n);
   var off=96+((W-116)-(bw*n+gap*(n-1)))/2;
   D.forEach(function(d,i){
     var x=off+i*(bw+gap), h=maxv>0?Math.max(3,(d.v/maxv)*(base-top)):3;
