@@ -682,6 +682,50 @@ section.sec.dark h2.sh em{color:var(--lime)}
 
 @media(max-width:1000px){ .oee{grid-template-columns:1fr} .quote-row{grid-template-columns:48px minmax(0,1fr)}
   .quote-row img{width:48px;height:48px} .oee .res{grid-template-columns:1fr} }
+
+/* ===== ronda 3 ===== */
+.blk-h{margin-top:40px}
+.blk-h + .fich,.blk-h + .g2,.blk-h + .g3,.blk-h + .tl,.blk-h + .tscroll,.blk-h + .vchart,
+.blk-h + .hb,.blk-h + .rm,.blk-h + .gt,.blk-h + .ef,.blk-h + .mesh,.blk-h + .steps,
+.blk-h + .pr4,.blk-h + .sim,.blk-h + .mig{margin-top:22px}
+
+/* migración 01 */
+.mig{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr);
+  align-items:stretch;margin-top:22px}
+.mig .mar{display:flex;align-items:center;justify-content:center;color:var(--n300);font-size:20px}
+.mg{background:var(--neutral-0);border:1px solid var(--n200);border-radius:12px;padding:20px;
+  display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
+.mg .yy{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--green-600)}
+.mg h4{margin-top:10px;font-size:17px;line-height:1.25}
+.mg p{margin-top:9px;font-size:13.5px;line-height:1.5;color:var(--n600)}
+.mg .tagl{margin-top:auto;padding-top:16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:800;color:var(--n400)}
+.mg.dk{background:var(--green-800);border-color:var(--lime);border-width:2px}
+.mg.dk .yy{color:var(--lime)} .mg.dk h4{color:var(--neutral-0)} .mg.dk p{color:var(--green-100)}
+.mg.dk .tagl{color:var(--green-300)}
+
+/* ficha numerada: riel a todo el alto */
+.nf{height:100%}
+.nf .idx{height:100%}
+
+/* escenarios parejos */
+.esc .bd{flex:1}
+
+/* mini tarjetas del acordeón, por tono */
+.acc .bd .gg div{color:var(--n800)}
+.acc .bd .gg .c1{background:var(--green-800)}
+.acc .bd .gg .c1 b{color:var(--lime)} .acc .bd .gg .c1 span{color:var(--green-100)}
+.acc .bd .gg .c2{background:var(--green-500)}
+.acc .bd .gg .c2 b{color:#04302B} .acc .bd .gg .c2 span{color:#04302B}
+.acc .bd .gg .c3{background:var(--green-200)}
+.acc .bd .gg .c3 b{color:var(--green-700)} .acc .bd .gg .c3 span{color:var(--green-900)}
+.acc .bd .gg .c4{background:var(--green-100)}
+.acc .bd .gg .c4 b{color:var(--green-700)} .acc .bd .gg .c4 span{color:var(--n700)}
+
+@media(max-width:1000px){
+  .mig{grid-template-columns:1fr}
+  .mig .mar{transform:rotate(90deg);padding:8px 0}
+}
 </style>
 
 <style>
@@ -893,12 +937,16 @@ section.sec.dark h2.sh em{color:var(--lime)}
   </div>
 
   <div class="blk-h one"><span class="k">Migración de la restricción</span><h3>Dónde estuvo el cuello de botella <em>y hacia dónde se movió</em></h3></div>
-  <div class="steps" style="padding:26px 22px">
-    <svg id="migsvg" viewBox="0 0 980 190" role="img" aria-label="Diagrama de migración de la restricción: de escala y diversificación en 2023 y 2024, a volumen de centros de datos en 2025 y 2026, a asignación entre dos compañías en 2027."></svg>
-    <p class="note" style="margin-top:4px">Los dos primeros bloques son hechos públicos con fuente. El tercero es la hipótesis que proponemos dimensionar.</p>
+  <div class="mig">
+    <div class="mg"><span class="yy">2023 · 2024</span><h4>Escala y diversificación</h4><p>Tercera planta en Jalisco: 145,000 pies cuadrados, 100 millones de dólares y 3,000 empleos proyectados.</p><span class="tagl">Hecho</span></div>
+    <div class="mar">→</div>
+    <div class="mg"><span class="yy">2025 · 2026</span><h4>Volumen de centros de datos</h4><p>El negocio creció 38% hasta 6,600 millones de dólares en el ejercicio fiscal 2026.</p><span class="tagl">Hecho</span></div>
+    <div class="mar">→</div>
+    <div class="mg dk"><span class="yy">2027</span><h4>Asignación entre dos compañías</h4><p>La escisión separa estados de resultados, no líneas de producción. El mismo piso sostiene dos economías.</p><span class="tagl">Hipótesis</span></div>
   </div>
+  <p class="note">Los dos primeros bloques son hechos públicos con fuente. El tercero es la hipótesis que proponemos dimensionar.</p>
 
-  <div class="g2 mt32">
+  <div class="g2 mt32" style="align-items:start">
     <div class="card" style="border-left:3px solid var(--green-500)">
       <div class="eyebrow">Lo que dijo la dirección</div>
       <div class="quote-row" style="margin-top:18px">
@@ -1148,12 +1196,6 @@ section.sec.dark h2.sh em{color:var(--lime)}
   <div class="mesh full mt32">
     <h3>Dónde entra London Consulting Group México</h3>
     <p>No solamente identificamos qué debería cambiar; ayudamos a implementar los cambios y a hacer que las cosas sucedan. Trabajamos hombro a hombro con el equipo del sitio: analítica sobre las bases de datos que ya existen, recorrido de planta donde ocurre el trabajo, diseño de las reglas de costo y asignación, capacitación de los mandos que las van a usar y acompañamiento hasta que el supervisor del turno las aplique el lunes.</p>
-    <div class="g3" style="margin-top:24px">
-      <div style="border:1px solid rgba(186,244,233,.3);border-radius:12px;padding:18px"><b class="num" style="font-size:30px;font-weight:300;color:var(--lime)">1:1</b><span style="display:block;margin-top:8px;font-size:13px;color:var(--green-100)">Retorno mínimo garantizado por contrato, con un promedio histórico de 5 a 1</span></div>
-      <div style="border:1px solid rgba(186,244,233,.3);border-radius:12px;padding:18px"><b class="num" style="font-size:30px;font-weight:300;color:var(--lime)">+5,000</b><span style="display:block;margin-top:8px;font-size:13px;color:var(--green-100)">Proyectos implementados desde 1991</span></div>
-      <div style="border:1px solid rgba(186,244,233,.3);border-radius:12px;padding:18px"><b class="num" style="font-size:30px;font-weight:300;color:var(--lime)">34</b><span style="display:block;margin-top:8px;font-size:13px;color:var(--green-100)">Semanas de implementación hombro a hombro, más un año de continuidad</span></div>
-    </div>
-  
   </div>
 
   <div class="blk-h one"><span class="k">Aritmética de planta</span><h3>Qué pasa con una línea cuando mueves sus tres factores</h3><p>El OEE multiplica disponibilidad, rendimiento y calidad. Mueve los tres controles para ver cómo se traduce en horas productivas y en horas perdidas por semana. Los valores son tuyos, no de Flex México.</p></div>
@@ -1229,12 +1271,12 @@ section.sec.dark h2.sh em{color:var(--lime)}
   <p class="lede">Cada agente de la sección anterior depende de una de estas respuestas. No son preguntas de diagnóstico cultural: son bifurcaciones que cambian el trabajo que hay que hacer y el tiempo que toma.</p>
 
   <div class="g3 mt32">
-    <div class="qc"><span class="wm num">01</span><span class="tg">01 · Costo</span><h4>¿El costo de manufactura por hora está abierto por línea y por programa, o se calcula a nivel sitio?</h4><div class="rows"><div class="r"><b>A</b><span>Está abierto: el trabajo empieza en validar la regla de indirectos y en medir desviación contra el costo comprometido.</span></div><div class="r"><b>B</b><span>Se calcula a nivel sitio: el primer entregable es el modelo de costo por línea, y es la base de todo lo demás.</span></div></div></div>
-    <div class="qc"><span class="wm num">02</span><span class="tg">02 · Asignación</span><h4>¿Existe una regla escrita de reparto de servicios compartidos entre programas?</h4><div class="rows"><div class="r"><b>A</b><span>Existe: se prueba contra la separación y se ajusta a dos entidades.</span></div><div class="r"><b>B</b><span>Se reparte por criterio: se diseña la regla y se corre en paralelo con la actual durante el estudio.</span></div></div></div>
-    <div class="qc"><span class="wm num">03</span><span class="tg">03 · Desviación</span><h4>¿Se mide la brecha entre el costo comprometido al cliente y el costo real, programa por programa?</h4><div class="rows"><div class="r"><b>A</b><span>Se mide en la semana: se analiza la dispersión entre programas y se ataca la cola.</span></div><div class="r"><b>B</b><span>Se mide al cierre: se instala el seguimiento semanal, que es donde la corrección todavía sirve.</span></div></div></div>
-    <div class="qc"><span class="wm num">04</span><span class="tg">04 · Fábrica</span><h4>¿Hay costo estándar por número de parte con mano de obra e indirectos, y cada cuánto se actualiza?</h4><div class="rows"><div class="r"><b>A</b><span>Existe y se actualiza: se revisa su vigencia contra el arancel y el salario de 2026.</span></div><div class="r"><b>B</b><span>Existe sin actualizar: la actualización es el primer entregable, porque dos decretos cambiaron el costo de aterrizaje.</span></div></div></div>
-    <div class="qc"><span class="wm num">05</span><span class="tg">05 · Jornada</span><h4>¿Están cuantificadas las horas-hombre contratadas y la cobertura real de cada turno?</h4><div class="rows"><div class="r"><b>A</b><span>Están: se modela directamente el escenario de 46 horas con registro electrónico.</span></div><div class="r"><b>B</b><span>Se administran por área: el levantamiento de cobertura por turno es la primera parada, antes de enero de 2027.</span></div></div></div>
-    <div class="qc"><span class="wm num">06</span><span class="tg">06 · Producción</span><h4>¿La planta produce contra pronóstico del cliente o contra reposición, y con qué exactitud se cumple?</h4><div class="rows"><div class="r"><b>A</b><span>Contra pronóstico medido: se trabaja sobre la exactitud y sobre el inventario que la protege.</span></div><div class="r"><b>B</b><span>Contra pedido en firme: el trabajo se concentra en la flexibilidad de la línea y en el tiempo de cambio.</span></div></div></div>
+    <div class="qc"><span class="tg">01 · Costo</span><h4>¿El costo de manufactura por hora está abierto por línea y por programa, o se calcula a nivel sitio?</h4><div class="rows"><div class="r"><b>A</b><span>Está abierto: el trabajo empieza en validar la regla de indirectos y en medir desviación contra el costo comprometido.</span></div><div class="r"><b>B</b><span>Se calcula a nivel sitio: el primer entregable es el modelo de costo por línea, y es la base de todo lo demás.</span></div></div></div>
+    <div class="qc"><span class="tg">02 · Asignación</span><h4>¿Existe una regla escrita de reparto de servicios compartidos entre programas?</h4><div class="rows"><div class="r"><b>A</b><span>Existe: se prueba contra la separación y se ajusta a dos entidades.</span></div><div class="r"><b>B</b><span>Se reparte por criterio: se diseña la regla y se corre en paralelo con la actual durante el estudio.</span></div></div></div>
+    <div class="qc"><span class="tg">03 · Desviación</span><h4>¿Se mide la brecha entre el costo comprometido al cliente y el costo real, programa por programa?</h4><div class="rows"><div class="r"><b>A</b><span>Se mide en la semana: se analiza la dispersión entre programas y se ataca la cola.</span></div><div class="r"><b>B</b><span>Se mide al cierre: se instala el seguimiento semanal, que es donde la corrección todavía sirve.</span></div></div></div>
+    <div class="qc"><span class="tg">04 · Fábrica</span><h4>¿Hay costo estándar por número de parte con mano de obra e indirectos, y cada cuánto se actualiza?</h4><div class="rows"><div class="r"><b>A</b><span>Existe y se actualiza: se revisa su vigencia contra el arancel y el salario de 2026.</span></div><div class="r"><b>B</b><span>Existe sin actualizar: la actualización es el primer entregable, porque dos decretos cambiaron el costo de aterrizaje.</span></div></div></div>
+    <div class="qc"><span class="tg">05 · Jornada</span><h4>¿Están cuantificadas las horas-hombre contratadas y la cobertura real de cada turno?</h4><div class="rows"><div class="r"><b>A</b><span>Están: se modela directamente el escenario de 46 horas con registro electrónico.</span></div><div class="r"><b>B</b><span>Se administran por área: el levantamiento de cobertura por turno es la primera parada, antes de enero de 2027.</span></div></div></div>
+    <div class="qc"><span class="tg">06 · Producción</span><h4>¿La planta produce contra pronóstico del cliente o contra reposición, y con qué exactitud se cumple?</h4><div class="rows"><div class="r"><b>A</b><span>Contra pronóstico medido: se trabaja sobre la exactitud y sobre el inventario que la protege.</span></div><div class="r"><b>B</b><span>Contra pedido en firme: el trabajo se concentra en la flexibilidad de la línea y en el tiempo de cambio.</span></div></div></div>
   </div>
 
   <p class="src">Las seis se responden en los primeros días del Estudio de Factibilidad, con el equipo del sitio y con acceso a las bases que ya existen.</p>
@@ -1249,13 +1291,13 @@ section.sec.dark h2.sh em{color:var(--lime)}
 
   <div class="g3 mt32">
     <div class="esc"><div class="cap" style="background:var(--green-200)"><b>Escenario base</b><h4>La separación ocurre a tiempo</h4></div>
-      <div class="bd">La escisión cierra en el primer trimestre de 2027 y la demanda de infraestructura de IA se mantiene. Las dos compañías operan con contratos de servicios de transición durante los primeros trimestres.</div>
+      <div class="bd">La escisión cierra en el primer trimestre de 2027 y la demanda de infraestructura de inteligencia artificial se mantiene en los niveles que la compañía guía hoy. Las dos compañías operan con contratos de servicios de transición durante los primeros trimestres.</div>
       <div class="wy"><b>Qué podría significar para Flex México.</b> El sitio factura servicios a dos clientes corporativos distintos. Cada hora de planta, cada metro cuadrado y cada indirecto tiene que poder facturarse con un criterio auditable.</div></div>
     <div class="esc"><div class="cap" style="background:var(--lime)"><b>Escenario de aceleración</b><h4>La rampa llega antes que la capacidad</h4></div>
-      <div class="bd">La demanda del segmento de nube y potencia crece por encima de lo planeado y la inversión de 2026–2028 se adelanta en el sitio con mayor capacidad instalada.</div>
+      <div class="bd">La demanda del segmento de nube y potencia crece por encima de lo planeado y la inversión de 2026–2028 se adelanta en el sitio que ya tiene mayor capacidad instalada y energía propia.</div>
       <div class="wy"><b>Qué podría significar para Flex México.</b> La restricción pasa a ser física y humana al mismo tiempo: espacio en un mercado sin vacancia y técnicos disputados por seis pares directos. El metro cuadrado liberado y la curva de aprendizaje se vuelven el camino más rápido a capacidad.</div></div>
     <div class="esc"><div class="cap" style="background:#EBC87E"><b>Escenario de presión</b><h4>El costo sube por los dos lados</h4></div>
-      <div class="bd">La jornada baja a 44 horas en 2028 mientras los decretos arancelarios siguen vigentes y el piso salarial avanza en las dos zonas.</div>
+      <div class="bd">La jornada baja a 44 horas en 2028 mientras los decretos arancelarios siguen vigentes y el piso salarial avanza en las dos zonas, la general y la fronteriza.</div>
       <div class="wy"><b>Qué podría significar para Flex México.</b> El costo por hora de manufactura sube de forma estructural y el margen se defiende con productividad por línea, con exactitud del costo de aterrizaje y con una asignación de indirectos que no castigue al programa equivocado.</div></div>
   </div>
 </div></section>
@@ -1271,45 +1313,45 @@ section.sec.dark h2.sh em{color:var(--lime)}
   <div class="mt32" id="hips">
     <div class="acc on"><button type="button"><span class="hn num">01</span><span class="ht"><small>Costo</small>La dispersión del costo por hora entre líneas comparables es mayor que la que explica la mezcla de producto</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Costo de manufactura por hora, por línea y por turno</span></div>
-        <div><b>Información</b><span>Costo estándar, nómina de planta, horas trabajadas por línea</span></div>
-        <div><b>Área</b><span>Finanzas de planta y Program Management</span></div>
-        <div><b>Cómo se dimensiona</b><span>Se compara la cola inferior contra la superior en líneas de proceso equivalente y se cuantifica la brecha en pesos por hora</span></div>
+        <div class="c1"><b>Indicador</b><span>Costo de manufactura por hora, por línea y por turno</span></div>
+        <div class="c2"><b>Información</b><span>Costo estándar, nómina de planta, horas trabajadas por línea</span></div>
+        <div class="c3"><b>Área</b><span>Finanzas de planta y Program Management</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Se compara la cola inferior contra la superior en líneas de proceso equivalente y se cuantifica la brecha en pesos por hora</span></div>
       </div></div></div>
     <div class="acc"><button type="button"><span class="hn num">02</span><span class="ht"><small>Asignación</small>Una parte relevante del gasto del sitio se reparte por un criterio que no resiste la separación en dos entidades</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Porcentaje del gasto asignado por prorrateo contra asignado por consumo real</span></div>
-        <div><b>Información</b><span>Catálogo de centros de costo y reglas de reparto</span></div>
-        <div><b>Área</b><span>Controlaría del sitio</span></div>
-        <div><b>Cómo se dimensiona</b><span>Se recalcula la contribución por programa con asignación por consumo y se mide la diferencia</span></div>
+        <div class="c1"><b>Indicador</b><span>Porcentaje del gasto asignado por prorrateo contra asignado por consumo real</span></div>
+        <div class="c2"><b>Información</b><span>Catálogo de centros de costo y reglas de reparto</span></div>
+        <div class="c3"><b>Área</b><span>Controlaría del sitio</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Se recalcula la contribución por programa con asignación por consumo y se mide la diferencia</span></div>
       </div></div></div>
     <div class="acc"><button type="button"><span class="hn num">03</span><span class="ht"><small>Rampa</small>El costo de no calidad y el reproceso de las primeras semanas de un producto nuevo no se separan del costo corriente</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Costo de no calidad por programa en las primeras ocho semanas contra régimen</span></div>
-        <div><b>Información</b><span>Scrap, retrabajo y horas de ingeniería por introducción</span></div>
-        <div><b>Área</b><span>Calidad e ingeniería de nuevos productos</span></div>
-        <div><b>Cómo se dimensiona</b><span>Se aísla el costo de curva de aprendizaje de los últimos lanzamientos</span></div>
+        <div class="c1"><b>Indicador</b><span>Costo de no calidad por programa en las primeras ocho semanas contra régimen</span></div>
+        <div class="c2"><b>Información</b><span>Scrap, retrabajo y horas de ingeniería por introducción</span></div>
+        <div class="c3"><b>Área</b><span>Calidad e ingeniería de nuevos productos</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Se aísla el costo de curva de aprendizaje de los últimos lanzamientos</span></div>
       </div></div></div>
     <div class="acc"><button type="button"><span class="hn num">04</span><span class="ht"><small>Jornada</small>Parte del hueco de horas de 2027 se puede cerrar con método antes de resolverlo con plantilla</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Horas-hombre contratadas contra horas de valor agregado por turno</span></div>
-        <div><b>Información</b><span>Registros de asistencia, balanceo de línea, cobertura por turno</span></div>
-        <div><b>Área</b><span>Recursos humanos y manufactura</span></div>
-        <div><b>Cómo se dimensiona</b><span>Estudio de balanceo y de tiempos de espera en las líneas de mayor volumen</span></div>
+        <div class="c1"><b>Indicador</b><span>Horas-hombre contratadas contra horas de valor agregado por turno</span></div>
+        <div class="c2"><b>Información</b><span>Registros de asistencia, balanceo de línea, cobertura por turno</span></div>
+        <div class="c3"><b>Área</b><span>Recursos humanos y manufactura</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Estudio de balanceo y de tiempos de espera en las líneas de mayor volumen</span></div>
       </div></div></div>
     <div class="acc"><button type="button"><span class="hn num">05</span><span class="ht"><small>Abasto</small>Hay números de parte cuyo costo de aterrizaje cambió con los decretos de 2026 sin que el estándar lo refleje</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Diferencia entre costo de aterrizaje real y costo estándar por número de parte</span></div>
-        <div><b>Información</b><span>Maestro de materiales con fracción arancelaria, pedimentos, régimen aplicable</span></div>
-        <div><b>Área</b><span>Compras y comercio exterior</span></div>
-        <div><b>Cómo se dimensiona</b><span>Se cruzan las compras del último año contra la fracción vigente</span></div>
+        <div class="c1"><b>Indicador</b><span>Diferencia entre costo de aterrizaje real y costo estándar por número de parte</span></div>
+        <div class="c2"><b>Información</b><span>Maestro de materiales con fracción arancelaria, pedimentos, régimen aplicable</span></div>
+        <div class="c3"><b>Área</b><span>Compras y comercio exterior</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Se cruzan las compras del último año contra la fracción vigente</span></div>
       </div></div></div>
     <div class="acc"><button type="button"><span class="hn num">06</span><span class="ht"><small>Espacio</small>Hay capacidad recuperable dentro del techo actual antes de requerir metros cuadrados nuevos</span><span class="hx">+</span></button>
       <div class="bd"><div class="gg">
-        <div><b>Indicador</b><span>Metros cuadrados ocupados por inventario en proceso y almacén contra metros productivos</span></div>
-        <div><b>Información</b><span>Layout, niveles de inventario, rotación por almacén</span></div>
-        <div><b>Área</b><span>Manufactura y cadena de suministro</span></div>
-        <div><b>Cómo se dimensiona</b><span>Recorrido de planta con medición de ocupación y de flujo</span></div>
+        <div class="c1"><b>Indicador</b><span>Metros cuadrados ocupados por inventario en proceso y almacén contra metros productivos</span></div>
+        <div class="c2"><b>Información</b><span>Layout, niveles de inventario, rotación por almacén</span></div>
+        <div class="c3"><b>Área</b><span>Manufactura y cadena de suministro</span></div>
+        <div class="c4"><b>Cómo se dimensiona</b><span>Recorrido de planta con medición de ocupación y de flujo</span></div>
       </div></div></div>
   </div>
 </div></section>
@@ -1827,12 +1869,12 @@ function initSim(){
 
 
 /* ============ gráficas de barras verticales ============ */
-function vbars(id,D,fmt){
+function vbars(id,D,fmt,unit,ticks){
   var svg=el(id); if(!svg) return; svg.innerHTML="";
-  var W=980,base=262,top=58,maxv=0;
+  var W=980,base=262,top=76,maxv=0;
   D.forEach(function(d){if(d.v>maxv)maxv=d.v;});
   var n=D.length, gap=22, bw=Math.min(132,(W-gap*(n-1))/n);
-  var off=(W-(bw*n+gap*(n-1)))/2;
+  var off=96+((W-116)-(bw*n+gap*(n-1)))/2;
   D.forEach(function(d,i){
     var x=off+i*(bw+gap), h=maxv>0?Math.max(3,(d.v/maxv)*(base-top)):3;
     var g=S("g",{},svg);
@@ -1847,7 +1889,14 @@ function vbars(id,D,fmt){
     });
     if(d.s) S("text",{x:x+bw/2,y:base+24+Math.min(2,lines.length)*15,"text-anchor":"middle","class":"vc-sub"},g,d.s);
   });
-  S("line",{x1:20,x2:W-20,y1:base,y2:base,"class":"vc-ax","stroke-width":1},svg);
+  S("line",{x1:86,x2:W-20,y1:base,y2:base,"class":"vc-ax","stroke-width":1},svg);
+  S("line",{x1:86,x2:86,y1:top-20,y2:base,"class":"vc-ax","stroke-width":1},svg);
+  (ticks||[]).forEach(function(tv){
+    var y=base-(maxv>0?(tv/maxv)*(base-top):0);
+    S("line",{x1:86,x2:W-20,y1:y,y2:y,"class":"vc-ax","stroke-width":1,"stroke-dasharray":"3 5",opacity:.6},svg);
+    S("text",{x:78,y:y+4,"text-anchor":"end","class":"vc-sub"},svg,tv.toLocaleString("es-MX"));
+  });
+  if(unit) S("text",{x:86,y:top-30,"class":"vc-sub"},svg,unit);
 
 }
 function segChart(){
@@ -1855,16 +1904,15 @@ function segChart(){
     {n:"Cloud and Power Infrastructure",s:"Se separa como Axiom",v:2500,c:"#03B585",tag:"+54%"},
     {n:"Integrated Technology Solutions",s:"Permanece en Flex",v:3300,c:"#0A7568",tag:"+22%"},
     {n:"Regulated Manufacturing Solutions",s:"Permanece en Flex",v:2700,c:"#085E54",tag:"+9%"}
-  ],function(v){return v.toLocaleString("es-MX")+" mdd";});
+  ],function(v){return v.toLocaleString("es-MX");},"Ingresos del trimestre · millones de dólares",[1000,2000,3000]);
 }
 function invChart(){
   vbars("invsvg",[
     {n:"Flex",s:"2026–2028",v:1000,c:"#C9E265",tag:""},
     {n:"Sanmina",s:"Anunciado en 2024",v:95,c:"#BAF4E9",tag:""},
     {n:"Jabil",s:"Anunciado para 2025",v:25,c:"#BAF4E9",tag:""},
-    {n:"Benchmark",s:"Planta nueva, 2025",v:0,c:"rgba(186,244,233,.35)",tag:""},
     {n:"Foxconn y Plexus",s:"Operación declarada",v:0,c:"rgba(186,244,233,.35)",tag:""}
-  ],function(v){return v>0?v.toLocaleString("es-MX")+" mdd":"No publicado";});
+  ],function(v){return v>0?v.toLocaleString("es-MX"):"No publicado";},"Inversión anunciada · millones de dólares",[250,500,750,1000]);
 }
 
 /* ============ 07 · simulador de OEE ============ */
